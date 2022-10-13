@@ -1,0 +1,318 @@
+.customePagination {
+    @include list-unstyled();
+    display: flex;
+    justify-content: center;
+}
+
+.customePagination li {
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.page-link {
+    padding: 0.375rem 0.75rem;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: var(--cui-pagination-color, #321fdb);
+    text-decoration: none;
+    background-color: var(--cui-pagination-bg, #fff);
+    border: 1px solid var(--cui-pagination-border-color, #c4c9d0);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--cui-pagination-active-color, rgba(255, 255, 255, 0.87));
+    background-color: var(--cui-pagination-active-bg, #321fdb);
+    border-color: var(--cui-pagination-active-border-color, #321fdb);
+}
+
+.pagination {
+    display: flex;
+    @include list-unstyled();
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: var(--#{$variable-prefix}pagination-color, $pagination-color);
+    text-decoration: if($link-decoration ==none, null, none);
+    background-color: var(--#{$variable-prefix}pagination-bg, $pagination-bg);
+    border: $pagination-border-width solid var(--#{$variable-prefix}pagination-border-color, $pagination-border-color);
+    @include transition($pagination-transition);
+
+    &:hover {
+        z-index: 2;
+        color: var(--#{$variable-prefix}pagination-hover-color, $pagination-hover-color);
+        text-decoration: if($link-hover-decoration ==underline, none, null);
+        background-color: var(--#{$variable-prefix}pagination-hover-bg, $pagination-hover-bg);
+        border-color: var(--#{$variable-prefix}pagination-hover-border-color, $pagination-hover-border-color);
+    }
+
+    &:focus {
+        z-index: 3;
+        color: var(--#{$variable-prefix}pagination-focus-color, $pagination-focus-color);
+        background-color: var(--#{$variable-prefix}pagination-focus-bg, $pagination-focus-bg);
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+    }
+}
+
+.page-item {
+    &:not(:first-child) .page-link {
+        @include ltr-rtl("margin-left", $pagination-margin-start);
+    }
+
+    &.active .page-link {
+        z-index: 3;
+        color: var(--#{$variable-prefix}pagination-active-color, $pagination-active-color);
+        @include gradient-bg(var(--#{$variable-prefix}pagination-active-bg, $pagination-active-bg));
+        border-color: var(--#{$variable-prefix}pagination-active-border-color, $pagination-active-border-color);
+    }
+
+    &.disabled .page-link {
+        color: var(--#{$variable-prefix}pagination-disabled-color, $pagination-disabled-color);
+        pointer-events: none;
+        background-color: var(--#{$variable-prefix}pagination-disabled-bg, $pagination-disabled-bg);
+        border-color: var(--#{$variable-prefix}pagination-disabled-border-color, $pagination-disabled-border-color);
+    }
+}
+
+
+//
+// Sizing
+//
+@include pagination-size($pagination-padding-y, $pagination-padding-x, null, $pagination-border-radius);
+
+.pagination-lg {
+    @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $pagination-border-radius-lg);
+}
+
+.pagination-sm {
+    @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $pagination-border-radius-sm);
+}
+
+
+
+
+.sidebar-brand img {
+    width: 50% !important;
+    height: 75% !important;
+}
+
+.table {
+    background-color: #fff !important;
+
+}
+.game-box-4 {margin: auto;}
+.ex-bt {margin-bottom: 20px;}
+.date-box {width: 150px;}
+.game-box {width: 100px;}
+.game-box-2 {width: 180px;}
+.game-box-3 {width: 150px;}
+.main-screen-log {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.ic .input-group-text {
+    background-color: #fff !important;
+    border-radius: 0px !important;
+}
+
+.log-bt .btn-primary {
+    padding-left: 20px !important;
+    padding-right: 25px !important;
+    background-color: #303c54 !important;
+    border: 0px !important;
+}
+
+.log-bt .btn-primary:hover {
+    background-color: #000 !important;
+}
+
+.tb {
+    background-color: #303c54;
+
+}
+
+.tb th {
+    color: #fff !important;
+}
+
+
+.s-1 {
+    justify-content: space-between;
+}
+
+.s-2 {
+    justify-content: space-between;
+}
+
+.se-1 {
+    width: 30%;
+}
+
+.s-2 th {
+    text-align: center;
+}
+
+.needs-validation {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px !important;
+}
+
+.coin-select-1 {
+    width: 140px;
+}
+
+.run-value-1 {
+    width: 140px;
+}
+
+.creat-date {
+
+    display: grid !important;
+}
+
+
+
+.game-bt {
+    text-align: center;
+    margin: auto;
+
+}
+
+.game-bt .btn {
+    background-color: #303c54 !important;
+    border: 0px !important;
+}
+
+.bg-secondary {
+    display: none !important;
+}
+
+
+.table thead {
+    background-color: #303c54 !important;
+    color: #fff;
+}
+
+
+.table th {
+    color: #fff !important;
+}
+
+.table tbody {
+    font-size: 14px !important;
+}
+
+.di-bt .disabled {
+    margin: auto !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.date-coupan .col-md-6 {
+    display: flex !important;
+    align-items: center !important;
+    grid-column-gap: 15px !important;
+}
+
+.date-coupan .MuiFormControl-root {
+    width: 73% !important;
+    margin-top: 15px !important;
+}
+
+.vl {
+    border-left: 1px solid black;
+    height: 200px;
+    margin-left: 30px;
+}
+
+.form-label {
+    margin-top: 10px !important;
+}
+
+.dc-game {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ss-1 {
+    display: flex;
+}
+
+.coin-log {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.coin-id {
+    margin-top: 20px !important;
+}
+
+.s-end-date {
+    margin-top: 20px !important;
+}
+
+.d-flex {
+    flex-wrap: wrap !important;
+}
+
+.de-b {
+    margin-top: 15px !important;
+}
+
+.main-body {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.withdrwa-page {
+    margin-bottom: 20px !important;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+}
+
+@media only screen and (max-width:1200px){
+    .account-stament {min-width: 160px;}
+    .d-2 {min-width: 300px;}
+    .d-c {min-width: 160px;}
+    .dat {min-width: 170px;}
+}
+@media only screen and (max-width:991px) {
+
+    .vl-2 {
+        display: none;
+    }
+
+    .customePagination li {
+        padding: 8px 8px;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .dc-game {
+        display: block;
+    }
+
+    .se-1 {
+        width: 100%;
+    }
+
+    .ss-1 {
+        display: block;
+    }
+
+    .page-link {
+        padding: 6px 6px 6px 6px !important;
+    }
+
+}
